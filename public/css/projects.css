@@ -26,13 +26,33 @@ body{
     display: flex;
     justify-content: center;
     align-items: center;
-}
+  }
   
-.logoNav{
+  .navContainer{
+    width: 100%;
+    max-width: 1280px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+  
+  .logoNav{
     width: 142px;
     height: 33px;
     padding: auto auto;
-}
+  }
+  
+  #home{
+    width: 75px;
+    height: 28px;
+    font-family: 'Roboto';
+    font-style: normal;
+    font-weight: 700;
+    font-size: 28px;
+    line-height: 100%;
+    color: #FFFFFF;
+    text-decoration: none;
+  }
   
 /*----------*/
 
@@ -100,24 +120,36 @@ body{
     border-radius: 8px;
 }
 
-.imageRepo{
-    height: 36px;
+.project:hover{
+    cursor: pointer;
 }
 
 .titleCard{
     display: flex;
     align-items: center;
-    gap: 16px;
-
-    
+    justify-content: space-between;    
 }
 
-.titleCard > h1 {
+.visibility{
+    height: 21px;
+
+    font-family: 'Roboto';
+    font-style: normal;
+    font-weight: 300;
+    font-size: 14px;
+    line-height: 150%;
+
+    color: #000000;
+}
+
+.titleCard > h2 {
     font-size: 18px;
     font-family: 'Roboto';
     font-style: normal;
-    font-weight: 500;
+    font-weight: 600;
     line-height: 150%;
+
+    height: 27px;
 }
 
 .textCard{
@@ -132,18 +164,58 @@ body{
     color: #4F5B67;
 }
 
-.project > a{
-    text-decoration: none;
+.details{
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
 
-    height: 18px;
+.colorLanguage{
+    height: 12px;
+    width: 12px;
+    border-radius: 50%;
+}
+
+.detailsNumber{
+    display: flex;
+    align-items: center;
+}
+
+#forkNumber{
+    margin-right: 12px;
+    margin-left: 3px;
+
+    width: 10px;
+    height: 12px;
     font-family: 'Roboto';
     font-style: normal;
-    font-weight: 400;
+    font-weight: 700;
     font-size: 12px;
     line-height: 150%;
 
-    color: #3333D1;
+    color: #4A4E69;
 }
+
+#starNumber{
+    margin-left: 3px;
+
+    width: 10px;
+    height: 12px;
+    font-family: 'Roboto';
+    font-style: normal;
+    font-weight: 700;
+    font-size: 12px;
+    line-height: 150%;
+
+    color: #4A4E69;
+}
+
+.lan{
+    display: flex;
+    align-items: center;
+    gap: 6px;
+}
+
 
   /*----------*/
 

@@ -1,6 +1,7 @@
 const users_tag = document.querySelector(".users");
 
-let users = ["arthur-vargas",
+let users = [
+  "arthur-vargas",
   "MilagreRethink",
   "loubackrethink",
   "filiperethink",
@@ -18,15 +19,15 @@ let users = ["arthur-vargas",
   "fernando-henrique2001",
   "gabsrethink",
   "Luisrethink",
-  "sthephanytezza-dev"
+  "sthephanytezza-dev",
 ];
 
 const gitGetUsers = async (users) => {
   let template = "";
 
   users.map(async (user) => {
-    user = await fetch(`http://api.github.com/users/${user}`).then(
-      (res) => res.json()
+    user = await fetch(`http://api.github.com/users/${user}`).then((res) =>
+      res.json()
     );
     let info = {
       image: user.avatar_url,
@@ -36,10 +37,9 @@ const gitGetUsers = async (users) => {
       following: user.following,
       followers: user.followers,
       repos_url: user.repos_url,
-    }
+    };
 
-    template +=
-      `
+    template += `
         <div class="user">
           <img src="${info.image}" alt="" class="imgUser">
 
@@ -69,7 +69,9 @@ const gitGetUsers = async (users) => {
             </div>
           </div>
 
-          <button onclick="getButtonViewProfile('${user.login}')" type="click" class="viewProfile">View Profile</button>
+          <button onclick="getButtonViewProfile('${
+            user.login
+          }')" type="click" class="viewProfile">View Profile</button>
           </div>
           `;
 
@@ -77,10 +79,8 @@ const gitGetUsers = async (users) => {
   });
 };
 
-const viewProfile_tag = document.querySelector(".viewProfile");
-
 const getButtonViewProfile = (user) => {
   window.location.href = `/public/projects.html?user=${user}`;
-}
+};
 
 window.addEventListener("DOMContentLoaded", () => gitGetUsers(users));
